@@ -4,18 +4,15 @@ class Program
 {
     static void Main()
     {
-        Console.Write("Введіть два числа: ");
-        int a = int.Parse(Console.ReadLine());
-        int b = int.Parse(Console.ReadLine());
-        int t;
+        Console.Write("Введіть три числа: ");
+        int a = int.Parse(Console.ReadLine()!);
+        int b = int.Parse(Console.ReadLine()!);
+        int c = int.Parse(Console.ReadLine()!);
+        int max = a;
 
-        if (a > b)
-        {
-            t = a;
-            a = b;
-            b = t;
-        }
+        if (b > max) max = b;
+        if (c > max) max = c;
 
-        Console.WriteLine(a + " " + b);
+        Console.WriteLine($"Найбільше число: {max}");
     }
 }
